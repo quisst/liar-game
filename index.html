@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Liar Game</title>
+    </head>
+    <body>
+        <div id="nicknameSection">
+            <h1>Set Your Nickname</h1>
+            <input
+                type="text"
+                id="nicknameInput"
+                placeholder="Enter your nickname"
+            />
+            <button id="nicknameSubmit">Submit</button>
+        </div>
+        <div id="gameRoomSection">
+            <h2>Game Rooms</h2>
+            <ul id="roomList"></ul>
+            <button id="createRoom">Create Room</button>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

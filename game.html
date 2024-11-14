@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Liar Game</title>
+    </head>
+    <body>
+        <div id="gameContainer">
+            <h2 id="currentStage">ㅇㅇ 단계</h2>
+            <div id="turnMessage">ㅇㅇ님이 단어를 설명하실 차례입니다.</div>
+            <div id="playersSection"></div>
+            <div id="keywordBox">
+                <h3>제시어: <span id="keyword"></span></h3>
+            </div>
+            <div id="chatLog">
+                <h3>채팅 로그</h3>
+                <div id="messages"></div>
+            </div>
+            <div id="inputSection">
+                <input
+                    type="text"
+                    id="explainWord"
+                    placeholder="단어 설명 입력"
+                />
+                <button id="sendExplain">설명 전송</button>
+                <input type="text" id="message" placeholder="메시지 입력" />
+                <button id="sendMessage">채팅 전송</button>
+            </div>
+            <div id="timer">
+                <p>남은 시간: <span id="timeLeft">30</span>초</p>
+            </div>
+            <div id="finalVoteSection" style="display: none">
+                <h3>최종 투표</h3>
+                <label
+                    ><input type="radio" name="verdict" value="guilty" />
+                    찬성</label
+                >
+                <label
+                    ><input type="radio" name="verdict" value="innocent" />
+                    반대</label
+                >
+                <button id="submitFinalVote">투표하기</button>
+            </div>
+            <div id="roundResultSection" style="display: none">
+                <h3>라운드 결과</h3>
+                <p id="roundResultMessage"></p>
+            </div>
+        </div>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/game.js"></script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Game Lobby</title>
+    </head>
+    <body>
+        <h1>Lobby</h1>
+        <h2 id="roomTitle"></h2>
+        <p id="playerCount">Players: 0/8</p>
+        <div id="chatArea">
+            <h3>Chat</h3>
+            <div id="messages"></div>
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Enter your message"
+            />
+            <button id="sendMessage">Send</button>
+        </div>
+        <h2>Current Participants</h2>
+        <ul id="participantList"></ul>
+        <button id="leaveRoom">Leave Room</button>
+        <button id="startGame" style="display: none">Start Game</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="js/lobby.js"></script>
+    </body>
+</html>

@@ -8,7 +8,8 @@
     </head>
     <body>
         <div id="gameContainer">
-            <h2 id="currentStage">ㅇㅇ 단계</h2>
+            <h2 id="currentStage">게임 대기 중...</h2>
+            <p id="roleInfo"></p>
             <div id="turnMessage">ㅇㅇ님이 단어를 설명하실 차례입니다.</div>
             <div id="playersSection"></div>
             <div id="keywordBox">
@@ -28,6 +29,11 @@
                 <input type="text" id="message" placeholder="메시지 입력" />
                 <button id="sendMessage">채팅 전송</button>
             </div>
+            <div id="voteSection" style="display: none">
+                <h3>투표</h3>
+                <select id="voteSelect"></select>
+                <button id="submitVote">투표하기</button>
+            </div>
             <div id="timer">
                 <p>남은 시간: <span id="timeLeft">30</span>초</p>
             </div>
@@ -46,6 +52,13 @@
             <div id="roundResultSection" style="display: none">
                 <h3>라운드 결과</h3>
                 <p id="roundResultMessage"></p>
+                <button id="nextRoundButton" style="display: none">
+                    다음 라운드 시작
+                </button>
+            </div>
+            <div id="scoreBoard">
+                <h3>점수판</h3>
+                <ul id="scoreList"></ul>
             </div>
         </div>
         <script src="/socket.io/socket.io.js"></script>

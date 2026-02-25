@@ -96,5 +96,6 @@ startGameButton.addEventListener("click", () => {
 });
 
 socket.on("gameStarted", () => {
-    window.location.href = "game.html";
+    // 현재 방 정보를 게임 화면으로 넘겨준다.
+    window.location.href = `game.html?room=${encodeURIComponent(room)}`;
 });
